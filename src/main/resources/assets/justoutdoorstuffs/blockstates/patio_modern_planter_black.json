@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "justoutdoorstuffs:block/patio_modern_planter_black"
+    },
+    "facing=east": {
+      "model": "justoutdoorstuffs:block/patio_modern_planter_black",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "justoutdoorstuffs:block/patio_modern_planter_black",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "justoutdoorstuffs:block/patio_modern_planter_black",
+      "y": 270
+    }
+  }
+}

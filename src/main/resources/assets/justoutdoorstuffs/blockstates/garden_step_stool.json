@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "justoutdoorstuffs:block/garden_step_stool"
+    },
+    "facing=east": {
+      "model": "justoutdoorstuffs:block/garden_step_stool",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "justoutdoorstuffs:block/garden_step_stool",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "justoutdoorstuffs:block/garden_step_stool",
+      "y": 270
+    }
+  }
+}

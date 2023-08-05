@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "justoutdoorstuffs:block/patio_iron_planter"
+    },
+    "facing=east": {
+      "model": "justoutdoorstuffs:block/patio_iron_planter",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "justoutdoorstuffs:block/patio_iron_planter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "justoutdoorstuffs:block/patio_iron_planter",
+      "y": 270
+    }
+  }
+}

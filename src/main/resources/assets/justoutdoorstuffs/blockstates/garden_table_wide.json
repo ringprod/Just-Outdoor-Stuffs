@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "justoutdoorstuffs:block/garden_table_wide",
+      "y": 90
+    },
+    "facing=east": {
+      "model": "justoutdoorstuffs:block/garden_table_wide",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "justoutdoorstuffs:block/garden_table_wide",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "justoutdoorstuffs:block/garden_table_wide"
+    }
+  }
+}

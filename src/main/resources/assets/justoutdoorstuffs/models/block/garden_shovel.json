@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_garden_tool_shovel",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_garden_tool_shovel",
+    "particle": "justoutdoorstuffs:block/jos_garden_tool_shovel",
+    "0": "justoutdoorstuffs:block/jos_garden_tool_shovel"
+  },
+  "render_type": "solid"
+}

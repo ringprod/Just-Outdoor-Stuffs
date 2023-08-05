@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.imjustseiyin.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BlockStateMixin",
+    "PlantBlockMixin",
+    "PlantPartMixin",
+    "SmallDripleafMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}

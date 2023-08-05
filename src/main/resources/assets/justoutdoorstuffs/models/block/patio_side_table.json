@@ -1,0 +1,10 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_patio_side_table",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_patio_side_table",
+    "particle": "justoutdoorstuffs:block/jos_patio_side_table",
+    "29": "justoutdoorstuffs:block/jos_patio_side_table",
+    "missing": "justoutdoorstuffs:block/jos_patio_side_table"
+  },
+  "render_type": "solid"
+}

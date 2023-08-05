@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "justoutdoorstuffs:block/garden_spade"
+    },
+    "facing=east": {
+      "model": "justoutdoorstuffs:block/garden_spade",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "justoutdoorstuffs:block/garden_spade",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "justoutdoorstuffs:block/garden_spade",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "justoutdoorstuffs:blueprint_garden_stuffs"
+  },
+  "result": "justoutdoorstuffs:garden_lawn_mower"
+}

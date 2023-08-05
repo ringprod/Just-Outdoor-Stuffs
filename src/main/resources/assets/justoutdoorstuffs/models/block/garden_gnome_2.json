@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_garden_gnome_pitchfork",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_garden_gnome_pitchfork",
+    "particle": "justoutdoorstuffs:block/jos_garden_gnome_pitchfork",
+    "0": "justoutdoorstuffs:block/jos_garden_gnome_pitchfork"
+  },
+  "render_type": "solid"
+}

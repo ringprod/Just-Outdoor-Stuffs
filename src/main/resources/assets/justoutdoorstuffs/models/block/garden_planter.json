@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_garden_planter",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_garden_planter",
+    "particle": "justoutdoorstuffs:block/jos_garden_planter",
+    "0": "justoutdoorstuffs:block/jos_garden_planter"
+  },
+  "render_type": "solid"
+}

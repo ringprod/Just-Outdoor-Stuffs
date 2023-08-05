@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_patio_armchair",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_patio_armchair",
+    "particle": "justoutdoorstuffs:block/jos_patio_armchair",
+    "0": "justoutdoorstuffs:block/jos_patio_armchair"
+  },
+  "render_type": "solid"
+}

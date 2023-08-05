@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_patio_modern_planter_white",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_patio_modern_planter_white",
+    "particle": "justoutdoorstuffs:block/jos_patio_modern_planter_white",
+    "0": "justoutdoorstuffs:block/jos_patio_modern_planter_white"
+  },
+  "render_type": "solid"
+}

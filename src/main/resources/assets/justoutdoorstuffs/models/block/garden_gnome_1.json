@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_garden_gnome",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_garden_gnome",
+    "particle": "justoutdoorstuffs:block/jos_garden_gnome",
+    "0": "justoutdoorstuffs:block/jos_garden_gnome"
+  },
+  "render_type": "solid"
+}

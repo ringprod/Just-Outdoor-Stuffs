@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "justoutdoorstuffs",
+	"version": "${version}",
+	"name": "Just Outdoor Stuffs",
+	"description": "Just outdoor furniture and decoration",
+	"authors": [
+		"ImJustSeiyin",
+		"ringpro"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/justoutdoorstuffs/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.imjustseiyin.JustOutdoorStuffsMod"
+		],
+		"client": [
+          "com.imjustseiyin.JustOutdoorStuffsClientMod"
+		]
+	},
+	"mixins": [
+		"justoutdoorstuffs.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}

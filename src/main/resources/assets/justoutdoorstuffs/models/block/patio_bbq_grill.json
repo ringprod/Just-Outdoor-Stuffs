@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_patio_bbq_grill",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_patio_bbq_grill",
+    "particle": "justoutdoorstuffs:block/jos_patio_bbq_grill",
+    "0": "justoutdoorstuffs:block/jos_patio_bbq_grill"
+  },
+  "render_type": "cutout"
+}

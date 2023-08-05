@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_garden_step_stool",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_garden_step_stool",
+    "particle": "justoutdoorstuffs:block/jos_garden_step_stool",
+    "0": "justoutdoorstuffs:block/jos_garden_step_stool"
+  },
+  "render_type": "solid"
+}

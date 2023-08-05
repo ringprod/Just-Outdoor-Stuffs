@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_garden_birdbath",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_garden_birdbath",
+    "particle": "justoutdoorstuffs:block/jos_garden_birdbath",
+    "0": "justoutdoorstuffs:block/jos_garden_birdbath"
+  },
+  "render_type": "translucent"
+}

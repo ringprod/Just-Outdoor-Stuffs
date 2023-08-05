@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_garden_table_large",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_garden_table_large",
+    "particle": "justoutdoorstuffs:block/jos_garden_table_large",
+    "0": "justoutdoorstuffs:block/jos_garden_table_large"
+  },
+  "render_type": "cutout"
+}

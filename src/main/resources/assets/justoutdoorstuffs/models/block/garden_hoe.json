@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_garden_tool_hoe",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_garden_tool_hoe",
+    "particle": "justoutdoorstuffs:block/jos_garden_tool_hoe",
+    "0": "justoutdoorstuffs:block/jos_garden_tool_hoe"
+  },
+  "render_type": "solid"
+}

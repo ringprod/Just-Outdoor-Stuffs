@@ -1,0 +1,10 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_garden_chair",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_garden_chair",
+    "particle": "justoutdoorstuffs:block/jos_garden_chair",
+    "0": "justoutdoorstuffs:block/jos_garden_chair",
+    "missing": "justoutdoorstuffs:block/jos_garden_chair"
+  },
+  "render_type": "cutout"
+}

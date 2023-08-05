@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "justoutdoorstuffs:block/patio_sofa_left"
+    },
+    "facing=east": {
+      "model": "justoutdoorstuffs:block/patio_sofa_left",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "justoutdoorstuffs:block/patio_sofa_left",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "justoutdoorstuffs:block/patio_sofa_left",
+      "y": 270
+    }
+  }
+}

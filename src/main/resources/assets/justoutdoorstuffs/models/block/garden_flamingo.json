@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_garden_flamingo",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_garden_flamingo",
+    "particle": "justoutdoorstuffs:block/jos_garden_flamingo",
+    "1": "justoutdoorstuffs:block/jos_garden_flamingo"
+  },
+  "render_type": "solid"
+}

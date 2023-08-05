@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "justoutdoorstuffs:block/patio_armchair"
+    },
+    "facing=east": {
+      "model": "justoutdoorstuffs:block/patio_armchair",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "justoutdoorstuffs:block/patio_armchair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "justoutdoorstuffs:block/patio_armchair",
+      "y": 270
+    }
+  }
+}

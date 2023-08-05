@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_patio_sofa_corner",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_patio_sofa_corner",
+    "particle": "justoutdoorstuffs:block/jos_patio_sofa_corner",
+    "0": "justoutdoorstuffs:block/jos_patio_sofa_corner"
+  },
+  "render_type": "solid"
+}

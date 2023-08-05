@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_garden_wheelbarrow",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_garden_wheelbarrow",
+    "particle": "justoutdoorstuffs:block/jos_garden_wheelbarrow",
+    "0": "justoutdoorstuffs:block/jos_garden_wheelbarrow"
+  },
+  "render_type": "cutout"
+}

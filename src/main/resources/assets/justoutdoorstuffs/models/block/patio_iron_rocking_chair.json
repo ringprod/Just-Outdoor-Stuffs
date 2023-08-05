@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_patio_rocking_chair",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_patio_rocking_chair",
+    "particle": "justoutdoorstuffs:block/jos_patio_rocking_chair",
+    "0": "justoutdoorstuffs:block/jos_patio_rocking_chair"
+  },
+  "render_type": "cutout"
+}

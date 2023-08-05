@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_garden_hose",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_garden_hose",
+    "particle": "justoutdoorstuffs:block/jos_garden_hose",
+    "0": "justoutdoorstuffs:block/jos_garden_hose"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_patio_lounge_chair",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_patio_lounge_chair",
+    "particle": "justoutdoorstuffs:block/jos_patio_lounge_chair",
+    "0": "justoutdoorstuffs:block/jos_patio_lounge_chair"
+  },
+  "render_type": "solid"
+}

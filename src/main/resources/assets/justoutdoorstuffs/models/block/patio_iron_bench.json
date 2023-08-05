@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_patio_iron_bench",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_patio_iron_bench",
+    "particle": "justoutdoorstuffs:block/jos_patio_iron_bench",
+    "0": "justoutdoorstuffs:block/jos_patio_iron_bench"
+  },
+  "render_type": "cutout"
+}

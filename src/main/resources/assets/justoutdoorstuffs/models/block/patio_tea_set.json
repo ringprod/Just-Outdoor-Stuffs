@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_patio_tea_set",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_patio_tea_set",
+    "particle": "justoutdoorstuffs:block/jos_patio_tea_set",
+    "0": "justoutdoorstuffs:block/jos_patio_tea_set"
+  },
+  "render_type": "solid"
+}

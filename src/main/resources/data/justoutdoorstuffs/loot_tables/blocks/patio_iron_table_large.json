@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "justoutdoorstuffs:patio_iron_table_large",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "part": "back_left"
+              }
+            }
+          ],
+          "name": "justoutdoorstuffs:patio_iron_table_large"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}
+

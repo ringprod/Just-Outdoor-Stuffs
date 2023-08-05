@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_patio_glass_coffee_table",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_patio_glass_coffee_table",
+    "particle": "justoutdoorstuffs:block/jos_patio_glass_coffee_table",
+    "31": "justoutdoorstuffs:block/jos_patio_glass_coffee_table"
+  },
+  "render_type": "cutout"
+}

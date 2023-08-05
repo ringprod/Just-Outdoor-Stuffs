@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "justoutdoorstuffs:block/garden_gnome_2"
+    },
+    "facing=east": {
+      "model": "justoutdoorstuffs:block/garden_gnome_2",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "justoutdoorstuffs:block/garden_gnome_2",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "justoutdoorstuffs:block/garden_gnome_2",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "justoutdoorstuffs:custom/jos_garden_watering_can",
+  "textures": {
+    "all": "justoutdoorstuffs:block/jos_garden_watering_can",
+    "particle": "justoutdoorstuffs:block/jos_garden_watering_can",
+    "0": "justoutdoorstuffs:block/jos_garden_watering_can"
+  },
+  "render_type": "solid"
+}
