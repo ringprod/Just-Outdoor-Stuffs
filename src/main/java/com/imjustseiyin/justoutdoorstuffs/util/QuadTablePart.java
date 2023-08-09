@@ -1,8 +1,8 @@
-package com.imjustseiyin.util;
+package com.imjustseiyin.justoutdoorstuffs.util;
 
-import net.minecraft.util.StringIdentifiable;
+import net.minecraft.util.StringRepresentable;
 
-public enum QuadTablePart implements StringIdentifiable {
+public enum QuadTablePart implements StringRepresentable {
     FRONTLEFT("front_left"),
     FRONTRIGHT("front_right"),
     BACKLEFT("back_left"),
@@ -14,11 +14,13 @@ public enum QuadTablePart implements StringIdentifiable {
         this.name = name;
     }
 
+    @Override
     public String toString() {
         return this.name;
     }
 
-    public String asString() {
+    @Override
+    public String getSerializedName() {
         return this.name;
     }
 }

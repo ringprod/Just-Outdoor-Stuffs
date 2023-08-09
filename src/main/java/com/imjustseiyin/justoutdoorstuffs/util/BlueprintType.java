@@ -1,7 +1,8 @@
-package com.imjustseiyin.util;
+package com.imjustseiyin.justoutdoorstuffs.util;
 
-import net.minecraft.util.StringIdentifiable;
-public enum BlueprintType implements StringIdentifiable {
+import net.minecraft.util.StringRepresentable;
+
+public enum BlueprintType implements StringRepresentable {
     GARDEN("garden"),
     PATIO("patio");
 
@@ -11,11 +12,13 @@ public enum BlueprintType implements StringIdentifiable {
         this.name = name;
     }
 
+    @Override
     public String toString() {
         return this.name;
     }
 
-    public String asString() {
+    @Override
+    public String getSerializedName() {
         return this.name;
     }
 }

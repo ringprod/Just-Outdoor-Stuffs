@@ -1,8 +1,8 @@
-package com.imjustseiyin.util;
+package com.imjustseiyin.justoutdoorstuffs.util;
 
-import net.minecraft.util.StringIdentifiable;
+import net.minecraft.util.StringRepresentable;
 
-public enum LongTablePart implements StringIdentifiable {
+public enum LongTablePart implements StringRepresentable {
     HEAD("head"),
     FOOT("foot");
 
@@ -12,11 +12,13 @@ public enum LongTablePart implements StringIdentifiable {
         this.name = name;
     }
 
+    @Override
     public String toString() {
         return this.name;
     }
 
-    public String asString() {
+    @Override
+    public String getSerializedName() {
         return this.name;
     }
 }
