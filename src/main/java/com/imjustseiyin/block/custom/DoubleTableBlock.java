@@ -26,12 +26,12 @@ public class DoubleTableBlock extends HorizontalFacingBlock {
     public DoubleTableBlock(AbstractBlock.Settings settings, VoxelShape voxelShape) {
         super(settings);
         this.SHAPE = voxelShape;
-        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(PART, LongTablePart.FOOT)));
+        this.setDefaultState(this.stateManager.getDefaultState().with(PART, LongTablePart.FOOT));
     }
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        if (direction == getDirectionTowardsOtherPart((LongTablePart) state.get(PART), (Direction) state.get(FACING))) {
+        if (direction == getDirectionTowardsOtherPart(state.get(PART), state.get(FACING))) {
             if (!(neighborState.isOf(this) && neighborState.get(PART) != state.get(PART))) {
                 return Blocks.AIR.getDefaultState();
             }
@@ -48,8 +48,8 @@ public class DoubleTableBlock extends HorizontalFacingBlock {
     public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
         super.onPlaced(world, pos, state, placer, itemStack);
         if (!world.isClient) {
-            BlockPos blockPos = pos.offset((Direction)state.get(FACING));
-            world.setBlockState(blockPos, (BlockState)state.with(PART, LongTablePart.HEAD).with(FACING, state.get(FACING)), 3);
+            BlockPos blockPos = pos.offset(state.get(FACING));
+            world.setBlockState(blockPos, state.with(PART, LongTablePart.HEAD).with(FACING, state.get(FACING)), 3);
             world.updateNeighbors(pos, Blocks.AIR);
             state.updateNeighbors(world, pos, 3);
         }
@@ -59,9 +59,9 @@ public class DoubleTableBlock extends HorizontalFacingBlock {
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         if (!world.isClient && player.isCreative()) {
-            LongTablePart LongTablePart = (LongTablePart)state.get(PART);
+            LongTablePart LongTablePart = state.get(PART);
             if (LongTablePart == LongTablePart.FOOT) {
-                BlockPos blockPos = pos.offset(getDirectionTowardsOtherPart(LongTablePart, (Direction)state.get(FACING)));
+                BlockPos blockPos = pos.offset(getDirectionTowardsOtherPart(LongTablePart, state.get(FACING)));
                 BlockState blockState = world.getBlockState(blockPos);
                 if (blockState.isOf(this) && blockState.get(PART) == LongTablePart.HEAD) {
                     world.setBlockState(blockPos, Blocks.AIR.getDefaultState(), 35);
@@ -80,7 +80,7 @@ public class DoubleTableBlock extends HorizontalFacingBlock {
         BlockPos blockPos = ctx.getBlockPos();
         BlockPos blockPos2 = blockPos.offset(direction);
         World world = ctx.getWorld();
-        return world.getBlockState(blockPos2).canReplace(ctx) && world.getWorldBorder().contains(blockPos2) ? (BlockState)this.getDefaultState().with(FACING, direction) : null;
+        return world.getBlockState(blockPos2).canReplace(ctx) && world.getWorldBorder().contains(blockPos2) ? this.getDefaultState().with(FACING, direction) : null;
     }
 
     @Override
@@ -100,7 +100,7 @@ public class DoubleTableBlock extends HorizontalFacingBlock {
 
     @Override
     public long getRenderingSeed(BlockState state, BlockPos pos) {
-        BlockPos blockPos = pos.offset((Direction)state.get(FACING), state.get(PART) == LongTablePart.HEAD ? 0 : 1);
+        BlockPos blockPos = pos.offset(state.get(FACING), state.get(PART) == LongTablePart.HEAD ? 0 : 1);
         return MathHelper.hashCode(blockPos.getX(), pos.getY(), blockPos.getZ());
     }
 

@@ -28,7 +28,7 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class ChairBlock extends HorizontalFacingBlock {
-    public static final DirectionProperty FACING = Properties.HOPPER_FACING;
+    public static final DirectionProperty FACING = Properties.FACING;
 
     private final VoxelShape originalVoxelShape;
 
@@ -52,7 +52,6 @@ public class ChairBlock extends HorizontalFacingBlock {
             if (SitUtil.addSitEntity(world, hitPos, sit, player.getBlockPos())) {
                 world.spawnEntity(sit);
                 player.startRiding(sit);
-                //sit.getDataTracker().set(SitEntity.IS_SITTING, true);
                 return ActionResult.SUCCESS;
             }
         }

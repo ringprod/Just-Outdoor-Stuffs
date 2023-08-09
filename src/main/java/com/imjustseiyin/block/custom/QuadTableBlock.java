@@ -29,15 +29,11 @@ public class QuadTableBlock extends HorizontalFacingBlock {
     public QuadTableBlock(AbstractBlock.Settings settings, VoxelShape voxelShape) {
         super(settings);
         this.SHAPE = voxelShape;
-        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(PART, QuadTablePart.FRONTLEFT)));
-    }
-
-    public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
-        super.onLandedUpon(world, state, pos, entity, fallDistance * 0.5F);
+        this.setDefaultState(this.stateManager.getDefaultState().with(PART, QuadTablePart.FRONTLEFT));
     }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        if (direction == getDirectionTowardsBackPart((QuadTablePart)state.get(PART), (Direction)state.get(FACING)) || direction == getDirectionTowardsSidePart((QuadTablePart)state.get(PART), (Direction)state.get(FACING))) {
+        if (direction == getDirectionTowardsBackPart(state.get(PART), state.get(FACING)) || direction == getDirectionTowardsSidePart(state.get(PART), state.get(FACING))) {
             if (!(neighborState.isOf(this) && neighborState.get(PART) != state.get(PART))) {
                 return Blocks.AIR.getDefaultState();
             }
@@ -58,14 +54,14 @@ public class QuadTableBlock extends HorizontalFacingBlock {
     public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
         super.onPlaced(world, pos, state, placer, itemStack);
         if (!world.isClient) {
-            Direction direction = (Direction)state.get(FACING);
+            Direction direction = state.get(FACING);
             BlockPos backLeftBlockPos = pos.offset(direction.getOpposite());
             BlockPos backRightBlockPos = backLeftBlockPos.offset(direction.rotateYCounterclockwise());
             BlockPos frontRightBlockPos = backRightBlockPos.offset(direction);
 
-            world.setBlockState(backLeftBlockPos, (BlockState)state.with(PART, QuadTablePart.BACKLEFT).with(FACING, state.get(FACING)), 3);
-            world.setBlockState(backRightBlockPos, (BlockState)state.with(PART, QuadTablePart.BACKRIGHT).with(FACING, state.get(FACING)), 3);
-            world.setBlockState(frontRightBlockPos, (BlockState)state.with(PART, QuadTablePart.FRONTRIGHT).with(FACING, state.get(FACING)), 3);
+            world.setBlockState(backLeftBlockPos, state.with(PART, QuadTablePart.BACKLEFT).with(FACING, state.get(FACING)), 3);
+            world.setBlockState(backRightBlockPos, state.with(PART, QuadTablePart.BACKRIGHT).with(FACING, state.get(FACING)), 3);
+            world.setBlockState(frontRightBlockPos, state.with(PART, QuadTablePart.FRONTRIGHT).with(FACING, state.get(FACING)), 3);
 
             world.updateNeighbors(pos, Blocks.AIR);
             state.updateNeighbors(world, pos, 3);
@@ -75,11 +71,11 @@ public class QuadTableBlock extends HorizontalFacingBlock {
 
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         if (!world.isClient && player.isCreative()) {
-            QuadTablePart brokenBlockTablePart = (QuadTablePart)state.get(PART);
+            QuadTablePart brokenBlockTablePart = state.get(PART);
             Direction brokenFacing = state.get(FACING);
             if (brokenBlockTablePart == QuadTablePart.FRONTLEFT) {
                 BlockPos backLeftBlockPos = pos.offset(getDirectionTowardsBackPart(brokenBlockTablePart, brokenFacing));
-                BlockPos backRightBlockPos = backLeftBlockPos.offset(getDirectionTowardsSidePart(brokenBlockTablePart, (Direction)world.getBlockState(backLeftBlockPos).get(FACING)));
+                BlockPos backRightBlockPos = backLeftBlockPos.offset(getDirectionTowardsSidePart(brokenBlockTablePart, world.getBlockState(backLeftBlockPos).get(FACING)));
                 BlockPos frontRightBlockPos = pos.offset(getDirectionTowardsSidePart(brokenBlockTablePart, brokenFacing));
 
                 removeBlockIfMatch(world, player, backRightBlockPos, QuadTablePart.BACKRIGHT);
@@ -107,7 +103,7 @@ public class QuadTableBlock extends HorizontalFacingBlock {
         BlockPos backRightBlockPos = frontLeftBlockPos.offset(direction.getOpposite()).offset(direction.rotateYCounterclockwise());
         BlockPos frontRightBlockPos = backRightBlockPos.offset(direction);
         World world = ctx.getWorld();
-        return isBlockEmpty(ctx, world, backLeftBlockPos) && isBlockEmpty(ctx, world, backRightBlockPos) && isBlockEmpty(ctx, world, frontRightBlockPos) ? (BlockState)this.getDefaultState().with(FACING, direction) : null;
+        return isBlockEmpty(ctx, world, backLeftBlockPos) && isBlockEmpty(ctx, world, backRightBlockPos) && isBlockEmpty(ctx, world, frontRightBlockPos) ? this.getDefaultState().with(FACING, direction) : null;
     }
 
     private Boolean isBlockEmpty(ItemPlacementContext ctx, World world, BlockPos blockPos) {
@@ -133,7 +129,7 @@ public class QuadTableBlock extends HorizontalFacingBlock {
     }
 
     public long getRenderingSeed(BlockState state, BlockPos pos) {
-        BlockPos blockPos = pos.offset((Direction)state.get(FACING), state.get(PART) == QuadTablePart.BACKLEFT ? 0 : 1);
+        BlockPos blockPos = pos.offset(state.get(FACING), state.get(PART) == QuadTablePart.BACKLEFT ? 0 : 1);
         return MathHelper.hashCode(blockPos.getX(), pos.getY(), blockPos.getZ());
     }
 
