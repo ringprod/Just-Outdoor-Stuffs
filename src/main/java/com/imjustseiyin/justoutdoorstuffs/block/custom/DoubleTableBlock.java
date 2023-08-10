@@ -92,8 +92,7 @@ public class DoubleTableBlock extends HorizontalDirectionalBlock {
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        return Shapes.block();
-        //return VoxelHelper.rotateShape(Direction.NORTH, pState.getValue(FACING), SHAPE);
+        return VoxelHelper.rotateShape(Direction.NORTH, pState.getValue(PART) == LongTablePart.FOOT ? pState.getValue(FACING).getOpposite() : pState.getValue(FACING), SHAPE);
     }
 
     @Override

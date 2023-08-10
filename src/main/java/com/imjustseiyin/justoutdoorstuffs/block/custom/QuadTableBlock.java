@@ -120,13 +120,12 @@ public class QuadTableBlock extends HorizontalDirectionalBlock {
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        /*return switch (pState.getValue(PART)) {
+        return switch (pState.getValue(PART)) {
             case BACKLEFT -> VoxelHelper.rotateShape(Direction.NORTH, pState.getValue(FACING).getClockWise(), SHAPE);
             case BACKRIGHT -> VoxelHelper.rotateShape(Direction.NORTH, pState.getValue(FACING).getOpposite(), SHAPE);
             case FRONTRIGHT -> VoxelHelper.rotateShape(Direction.NORTH, pState.getValue(FACING).getCounterClockWise(), SHAPE);
             case FRONTLEFT -> VoxelHelper.rotateShape(Direction.NORTH, pState.getValue(FACING), SHAPE);
-        };*/
-        return Shapes.block();
+        };
     }
 
     @Override
